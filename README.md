@@ -1,3 +1,3 @@
 # Group-2---eRestaraunt
-Creating an eRestraunt system 
+Creating an eRestaurant system 
 This is for uni
