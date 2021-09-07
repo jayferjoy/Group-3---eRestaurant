@@ -4,7 +4,8 @@
   "description": "Creating an eRestraunt system \r This is for uni",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "Start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/jayferjoy/Group-2---eRestaurant#readme",
   "dependencies": {
+    "env": "^0.0.2",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
