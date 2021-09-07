@@ -1,0 +1,8 @@
+{
+  "name": "Login",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jayferjoy/Group-2---eRestaurant.git",
+  "author": "jayferjoy <jayfer.development@gmail.com>",
+  "license": "MIT"
+}
