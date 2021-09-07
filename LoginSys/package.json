@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jayferjoy/Group-2---eRestaurant/issues"
   },
-  "homepage": "https://github.com/jayferjoy/Group-2---eRestaurant#readme"
+  "homepage": "https://github.com/jayferjoy/Group-2---eRestaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
