@@ -1,7 +1,11 @@
-.body1 {background-color: #552427;
+.body1 {background-color: #dad9ee;
 }
 
-.div1 {background-color: #220e10;}
+.div1 {background-color: #73baf8;
+    width: 1800px;
+  height: 100px;
+
+}
 
 .div2{background-color: #fb6b74;}
 
@@ -32,4 +36,3 @@
         position:relative;
         top:1px;
     }
-}
