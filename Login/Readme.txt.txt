@@ -1,0 +1,1 @@
+This file contains the js code for the login system. It will be using JWT for the encoding. 
