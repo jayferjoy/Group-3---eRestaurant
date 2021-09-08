@@ -1,7 +1,30 @@
-exports.register =  (req, res, next) => {
- 
-    res.send("Register Route");
+const User = require('../models/User');
 
+
+
+
+exports.register =  (req, res, next) => {
+    //require the following for a registration
+    const {username, email, password} = req.body;
+
+    //error handling mechanisam
+    try{
+        const user = await User.create({
+            username, email, password
+        });
+
+        res.status(201).json({
+            success: true,
+            user
+        });
+        
+    } catch (error){
+        res.status(500).json({
+            success: false,
+            error: error.message, 
+        });
+
+    }
 };
 
 exports.login =  (req, res, next) => {
