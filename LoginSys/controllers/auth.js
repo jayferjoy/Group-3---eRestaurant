@@ -28,37 +28,11 @@ exports.register =  async (req, res, next) => {
     res.send("Register Route");
 };
 
-exports.login = async (req, res, next) => {
-    const {email, password} = req.body;
+exports.login =  (req, res, next) => {
 
-    if(!email || !password) {
-        res.status(400).json({success: false, error: "Please provide email and password"})
+    res.send("Login Route");
 
-    }
-    try {
-        const user = await User.findOne({ email }).select("+password");
-
-        if(!user) {
-            res.status(404).json({ success: false, error: "Invalid credentials"})
-        }
-
-
-        const isMatch = await user.matchPasswords(password);
-
-        if(!isMatch) {
-            res.status(404).json({success: false, error: "Invalid credentials"})
-        }
-
-        res.status(200).json({
-            success: true,
-            token: "dqweqwhudsa"
-        })
-
-    } catch (error) {
-        next(error);
-
-    }
-}
+};
 
 
 exports.forgotpassword =  (req, res, next) => {
