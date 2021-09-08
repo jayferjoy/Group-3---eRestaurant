@@ -25,7 +25,6 @@ const UserSchema = new mongoose.Schema({
     resetPasswordExpire: Date,
   });
 
-  //encryption of password before user object is saved
   UserSchema.pre("save", async function (next) {
     if (!this.isModified("password")) {
       next();
