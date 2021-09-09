@@ -36,6 +36,12 @@ const UserSchema = new mongoose.Schema({
     next();
   });
 
+UserSchema.methods.matchPasswords = async function(password) {
+  //compare the method run against userSchema and checks the password from the database from the current password.
+  return await bcrypt.compare(password, this.password);
+}
+
+
   const User = mongoose.model("User", UserSchema);
 
   module.exports = User;
