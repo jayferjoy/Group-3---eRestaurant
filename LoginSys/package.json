@@ -1,0 +1,30 @@
+{
+  "name": "group-2---erestaurant",
+  "version": "1.0.0",
+  "description": "Creating an eRestraunt system \r This is for uni",
+  "main": "server.js",
+  "scripts": {
+    "Start": "node server.js",
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayferjoy/Group-2---eRestaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayferjoy/Group-2---eRestaurant/issues"
+  },
+  "homepage": "https://github.com/jayferjoy/Group-2---eRestaurant#readme",
+  "dependencies": {
+    "env": "^0.0.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
