@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const ErrorResponse = require('../utlis/errorResponse');
 
 exports.register = async (req, res, next) => {
     const {username, email, password} = req.body;
@@ -10,17 +11,15 @@ exports.register = async (req, res, next) => {
             email, 
             password,
         });
-
-        res.status(201).json({
-            success: true,
-            user: User,
-        });
+        
+    res.status(200).json({
+        success: true,
+        token: "24asdkjnnasdjk",
+    });
 
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            error: error.message, 
-        });
+   
+        next(error);
 
     }
     
@@ -34,7 +33,7 @@ exports.login =  async(req, res, next) => {
 
 
     if(!email || !password){
-            res.status(400).json({success: false, error: "Please provide email and password"})
+           return next (new ErrorResponse("Please provide an email and password",400));
     }
 
     try {
@@ -43,19 +42,20 @@ exports.login =  async(req, res, next) => {
 
 
         if(!user){
-                res.status(404).json({ success:false, error: "Invalid Credentials"});
+            return next (new ErrorResponse("invalid credentials",404));
             }
     //running against encrypted password, and will return true or false statement
-    const isMatch = await user.matchPasswords(password);
+    const isMatch = await user.matchPasswords(password); 
 
 
     if (!isMatch) {
-        res.status(404).json({success: false, error: "invalid credentials"});
+        return next (new ErrorResponse("invalid credentials",404));
     }
 
-    res.status(200).json({
+
+    res.status(201).json({
         success: true,
-        token: "token222322",
+        token: "24asdkjnnasdjk",
     });
 
     } catch (error){
@@ -75,3 +75,11 @@ exports.resetpassword =  (req, res, next) => {
     res.send("Reset Password Route");
 
 };
+
+//create function that gets access to user
+const sendToken = (user, statusCode, res) => {
+    //get into the user model
+    const token = user.getSignedToken();
+    res.status(statusCode).json({success:true, token});
+
+}
