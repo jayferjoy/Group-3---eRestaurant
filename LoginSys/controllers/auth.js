@@ -12,10 +12,11 @@ exports.register = async (req, res, next) => {
             password,
         });
         
-    res.status(200).json({
+    res.status(201).json({
         success: true,
-        token: "24asdkjnnasdjk",
+        token:"asdjklasdlasdkl"
     });
+ 
 
     } catch (error) {
    
@@ -53,10 +54,7 @@ exports.login =  async(req, res, next) => {
     }
 
 
-    res.status(201).json({
-        success: true,
-        token: "24asdkjnnasdjk",
-    });
+    sendToken(user, 200, res);
 
     } catch (error){
         res.status(500).json ({success: false, error: error.message});
@@ -79,7 +77,7 @@ exports.resetpassword =  (req, res, next) => {
 //create function that gets access to user
 const sendToken = (user, statusCode, res) => {
     //get into the user model
-    const token = user.getSignedToken();
+    const token = user.getSignedJwtToken();
     res.status(statusCode).json({success:true, token});
 
 }
