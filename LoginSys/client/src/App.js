@@ -4,11 +4,11 @@ import axios from 'axios';
 
 import PrivateRoute from './components/routing/PrivateRoute';
 
-import PrivateScreen from "./components/screens/PrivateScreen";
-import LoginScreen from "./components/screens/LoginScreen";
-import RegisterScreen from "./components/screens/RegisterScreen";
-import ForgotPasswordScreen from "./components/screens/ForgotPasswordScreen";
-import ResetPasswordScreen from "./components/screens/ResetPasswordScreen";
+import PrivateScreen from "./components/Screens/PrivateScreen";
+import LoginScreen from "./components/Screens/LoginScreen";
+import RegisterScreen from "./components/Screens/RegisterScreen";
+import ForgotPasswordScreen from "./components/Screens/ForgotPasswordScreen";
+import ResetPasswordScreen from "./components/Screens/ResetPasswordScreen";
 
 const App =() => {
   return (
@@ -23,6 +23,7 @@ const App =() => {
           <Route exact path="/passwordreset/:resetToken" component={ResetPasswordScreen}/>
         </Switch>
       </div>
+      
     </Router>
 
   );
