@@ -29,7 +29,19 @@ const ResetPasswordScreen = () => {
   
         <div>
         <h1 >Reset Password</h1>
+        <div>
+        <label>New Password: </label>
+        <input type="password"></input>
   
+        </div>
+        <div>
+        <label>Confirm New Password: </label>
+        <input type="password"></input>
+  
+        </div>
+        <div>
+        <button>Reset Password</button>
+        </div> 
         <img 
         src="https://i.imgur.com/UH3w8wg.jpg"
         alt="new"

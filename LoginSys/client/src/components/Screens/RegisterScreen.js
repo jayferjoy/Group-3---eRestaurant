@@ -29,7 +29,30 @@ const RegisterScreen = () => {
   
         <div>
         <h1 >Register</h1>
+        
+        <div>
+      <label>Username:</label>
+      <input type="email"></input>
+
+      </div>
+      <div>
+      <label>Email:</label>
+      <input type="email"></input>
+
+      </div>
+        <div>
+        <label>Password: </label>
+        <input type="password"></input>
   
+        </div>
+        <div>
+        <label>Confirm Password: </label>
+        <input type="password"></input>
+  
+        </div>
+        <div>
+        <button>Register</button>
+        </div>
         <img 
         src="https://i.imgur.com/UH3w8wg.jpg"
         alt="new"

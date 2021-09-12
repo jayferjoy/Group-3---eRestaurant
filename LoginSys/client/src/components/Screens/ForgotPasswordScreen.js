@@ -32,7 +32,16 @@ const ForgotPasswordScreen = () => {
 
 
       <div>
-      <h1 >Login</h1>
+      <h1 >Forgot Password</h1>
+      <div>
+      <label>Email:</label>
+      <input type="email"></input>
+
+      </div>
+      <div>
+      <button> Send Email</button>
+      </div>
+
 
       <img 
       src="https://i.imgur.com/UH3w8wg.jpg"

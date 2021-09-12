@@ -43,7 +43,10 @@ const LoginScreen = () => {
       <input type="password"></input>
 
       </div>
-
+      <div>
+      <button>Login</button>
+      </div>
+    
       <img 
       src="https://i.imgur.com/UH3w8wg.jpg"
       alt="new"
