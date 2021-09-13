@@ -25,7 +25,7 @@ const LoginScreen = () => {
       <button class="button1">Booking</button>
      
       <div>
-      <button className="button1"> <Link to="/ForgotPassword">ForgotPassword</Link></button>
+      <button className="button1"> <Link to="/Forgot Password">ForgotPassword</Link></button>
       </div>
       
 
