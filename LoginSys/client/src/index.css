@@ -1,13 +1,103 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    background: #eee;
+    color: #333;
+  }
+  
+  .form-group,
+  .form-group label,
+  .form-group input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group label {
+    font-size: 0.8rem;
+  }
+  
+  .form-group input {
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background-color: #eee;
+    outline-width: 0;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus {
+    border-bottom: 3px solid #ae142a;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .btn-primary {
+    background-color: #ae142a;
+    color: #fff;
+  }
+  
+  .error-message {
+    width: 100%;
+    display: inline-block;
+    padding: 5px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  
+  .success-message {
+    width: 100%;
+    display: inline-block;
+    padding: 5px;
+    background: green;
+    color: #fff;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .navbar-btn {
+    border-color: #ae142a;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ae142a;
+    padding: 12px 24px !important;
+    margin: 0px 0px 0px 10px;
+}
+.navbar-btn:hover {
+    color: #FFF;
+    background-color: #b73333 !important;
+    border-color: #b73333 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-primary {
+    border-color: #ae142a;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav {
+  text-align: center;
+}
+.nav ul{
+  display: inline-block;
 }
