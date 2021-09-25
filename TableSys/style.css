@@ -17,4 +17,71 @@ body{
     font-family: "Lato", sans-serif;
     margin:0;
 }
- 
+
+.restaurant-container{
+    margin: 20px 0;
+
+}
+
+.restaurant-container select{
+    background-color: blanchedalmond;
+    border: 0;
+    border-radius:  5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 30px;
+
+}
+
+.table{
+    background-colour: #444451;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.table.selected{
+    background-color: chartreuse;
+}
+
+.table.unavailable{
+    background-color: darkgray;
+}
+
+.table:nth-of-type(2){
+    margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 18px;
+}
+
+.table:not(.unavailable):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+
+}
+
+.showcase .table:not(.unavailable):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase{
+    background: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius:  5px;
+    color: #777;
+    list-style: none;
+    display:flex;
+}
