@@ -1,0 +1,46 @@
+<!--HTML for Restaurant-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <!--Creating title-->
+    <title>
+        Restaurant Tables Booking
+    </title>
+</head>
+<body>
+    <div class ="restaurant-container">
+        <label> Select a time: </label>
+        <select id="time">
+            <option value="220">Breakfast</option>
+            <option value="320">Lunch</option>
+            <option value="420">Dinner</option>
+         </select>
+    </div>
+
+    <ul>
+        <li>
+            <div class="table"></div>
+            <small>Available</small>
+        </li>
+        <li>
+            <div class="table selected">
+                <small>Selected</small>
+            </div>
+        </li>
+        <li>
+            <div class="table unavailable"></div>
+            <small>Unavailable</small>
+        </li>
+    </ul>
+
+    <p class="class">
+        You have selected <span id="count">0</span>
+    </p>
+    
+
+</body>
+</html>
