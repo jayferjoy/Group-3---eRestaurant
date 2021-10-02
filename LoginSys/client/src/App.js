@@ -4,9 +4,15 @@ import PrivateRoute from './components/routing/PrivateRoute';
 
 import PrivateScreen from './components/screens/PrivateScreen';
 import LoginScreen from './components/screens/LoginScreen';
+import EmployeeLoginScreen from './components/screens/EmployeeLoginScreen';
+import EmployeePageScreen from './components/screens/EmployeePageScreen';
 import RegisterScreen from './components/screens/RegisterScreen';
 import ForgotPasswordScreen from './components/screens/ForgotPasswordScreen';
 import ResetPasswordScreen from './components/screens/ResetPasswordScreen';
+import CustomerAccountScreen from './components/screens/CustomerAccountScreen';
+
+import HomeScreen from './components/screens/HomeScreen';
+
 
 
 const App = () => {
@@ -16,9 +22,15 @@ const App = () => {
           <Switch>
             <PrivateRoute exact path="/" component={PrivateScreen}/>
             <Route exact path="/login" component={LoginScreen}/>
+            <Route exact path="/employeelogin" component={EmployeeLoginScreen}/>
+            <Route exact path="/employeepage" component={EmployeePageScreen}/>
             <Route exact path="/register" component={RegisterScreen}/>
             <Route exact path="/forgotpassword" component={ForgotPasswordScreen}/>
             <Route exact path="/passwordreset/:resetToken" component={ResetPasswordScreen}/>
+            <Route exact path="/customeraccount" component={CustomerAccountScreen}/>
+            <Route exact path="/home" component={HomeScreen}/>
+
+            
           </Switch>
 
         </div>
