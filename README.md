@@ -1,3 +1,3 @@
-# Group-2---eRestaraunt
-Creating an eRestaurant system 
-This is for uni
+Branch has new Customer Acc + Employee Acc Screen, Employee Login Screen, Home Screen
+
+Waiting for employee auth token functionality 
