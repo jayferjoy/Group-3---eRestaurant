@@ -54,7 +54,7 @@ const RegisterScreen = ({ history }) => {
     <div className = "nav"> 
 
 <ul className="nav ul"> 
-        <Link to="/"><button className='navbar-btn'>Home</button></Link>
+        <Link to="/home"><button className='navbar-btn'>Home</button></Link>
         <Link to="/Register"><button className="navbar-btn">Register</button></Link>
         <Link to="/Login"><button className="navbar-btn">Login</button></Link>
         <button className="navbar-btn">Menu</button>

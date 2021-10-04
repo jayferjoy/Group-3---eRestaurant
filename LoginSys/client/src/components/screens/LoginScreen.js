@@ -32,7 +32,7 @@ const LoginScreen = ({ history }) => {
 
       localStorage.setItem("authToken", data.token);
 
-      history.push("/");
+      history.push("/customeraccount");
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
@@ -45,10 +45,10 @@ const LoginScreen = ({ history }) => {
       <div className = "nav"> 
 
 <ul className="nav ul"> 
-        <Link to="/"><button className='navbar-btn'>Home</button></Link>
+        <Link to="/home"><button className='navbar-btn'>Home</button></Link>
         <Link to="/Register"><button className="navbar-btn">Register</button></Link>
         <Link to="/Login"><button className="navbar-btn">Login</button></Link>
-        <button className="navbar-btn">Menu</button>
+        <Link to="/Home"><button className="navbar-btn">Menu</button></Link>
         <button className="navbar-btn">Booking</button>
         </ul>
       
@@ -97,6 +97,12 @@ const LoginScreen = ({ history }) => {
         <span className="login-screen__subtext">
           Don't have an account? <Link to="/register">Register</Link>
         </span>
+       <label htmlFor="password">
+            
+            <Link to="/employeelogin" className="employee-login-screen__staff">
+              Staff
+            </Link>
+            </label>
       </form>
     </div>
     </div>
