@@ -40,7 +40,7 @@ const PrivateScreen = ({history}) => {
         error ? <span className="error-message">{error}</span> : <>
         <div style= {{background: "green", color: "white"}}>
             {privateData}
-
+s
         </div>
         <button onClick={logoutHandler}> Logout</button>
         </>
