@@ -25,7 +25,11 @@ const EmployeeLoginScreen = ({ history }) => {
 
     try {
       const { data } = await axios.post(
+
+        "/api/auth/employeeLogin",
+
         "/api/auth/Elogin",
+
         { email, password },
         config
       );
@@ -40,6 +44,7 @@ const EmployeeLoginScreen = ({ history }) => {
       }, 5000);
     }
   };
+
 
   
   
@@ -70,6 +75,7 @@ const EmployeeLoginScreen = ({ history }) => {
       }
     };
 
+
   return (
     <div className = "nav"> 
 
@@ -82,7 +88,11 @@ const EmployeeLoginScreen = ({ history }) => {
       </ul>
     
     
+
+  <div className="login-screen">
+
   <div className="employee-login-screen">
+
       
   
     <form onSubmit={employeeLoginHandler} className="employee-login-screen__form">
@@ -131,6 +141,9 @@ const EmployeeLoginScreen = ({ history }) => {
           </Link>
           </label>
     </form>
+
+  </div>
+
     </div>
     <div className="div">
       
@@ -182,6 +195,7 @@ const EmployeeLoginScreen = ({ history }) => {
           </label>
     </form>
     </div>
+
   </div>
   );
 };

@@ -1,5 +1,13 @@
+
+const User = require("../models/User");
+const Staff = require("../models/Staff");
+const Manager = require("../models/Manager");
+const ErrorResponse = require("../utils/errorResponse");
+const sendEmail = require('../utils/sendEmail');
+
 const User = require('../models/User');
 const ErrorResponse = require('../utlis/errorResponse');
+
 
 exports.register = async (req, res, next) => {
     const {username, email, password} = req.body;
@@ -27,8 +35,44 @@ exports.register = async (req, res, next) => {
 };
 
 
+  exports.Mregister = async (req, res, next) => {
+    const { username, email, password } = req.body;
+  
+    try {
+      const manager = await Manager.create({
+        username,
+        email,
+        password,
+      });
+  
+      sendToken(manager, 200, res);
+    } catch (err) {
+      next(err);
+    }
+  };
+
+  exports.Eregister = async (req, res, next) => {
+    const { username, email, password } = req.body;
+  
+    try {
+      const staff = await Staff.create({
+        username,
+        email,
+        password,
+      });
+  
+      sendToken(staff, 200, res);
+    } catch (err) {
+      next(err);
+    }
+  };
+
+exports.login = async (req, res, next) => {
+
+
 
 exports.login =  async(req, res, next) => {
+
     const {email, password} = req.body;
 
 
@@ -61,6 +105,65 @@ exports.login =  async(req, res, next) => {
     }
 };
 
+
+
+exports.Elogin = async (req, res, next) => {
+    const {email, password} = req.body;
+
+    if(!email || !password) {
+        return next(new ErrorResponse("Please provide an email and password", 400));
+
+    }
+    try {
+        const staff = await Staff.findOne({ email }).select("+password");
+
+        if(!staff) {
+            return next(new ErrorResponse("Invalid credentials", 401));
+        }
+
+
+        const isMatch = await staff.matchPasswords(password);
+
+        if(!isMatch) {
+            return next(new ErrorResponse("Invalid credentials", 401));
+        }
+
+        sendToken(staff, 200, res);
+
+    } catch (error) {
+        next(error);
+
+    }
+}
+
+exports.Mlogin = async (req, res, next) => {
+    const {email, password} = req.body;
+
+    if(!email || !password) {
+        return next(new ErrorResponse("Please provide an email and password", 400));
+
+    }
+    try {
+        const manager = await Manager.findOne({ email }).select("+password");
+
+        if(!manager) {
+            return next(new ErrorResponse("Invalid credentials", 401));
+        }
+
+
+        const isMatch = await manager.matchPasswords(password);
+
+        if(!isMatch) {
+            return next(new ErrorResponse("Invalid credentials", 401));
+        }
+
+        sendToken(manager, 200, res);
+
+    } catch (error) {
+        next(error);
+
+    }
+}
 
 exports.forgotpassword = async (req, res, next) => {
     const {email} = req.body;
@@ -117,8 +220,13 @@ exports.resetpassword =  (req, res, next) => {
 
 //create function that gets access to user
 const sendToken = (user, statusCode, res) => {
+
+    const token = user.getSignedToken();
+    res.status(statusCode).json({ success: true, token})
+
     //get into the user model
     const token = user.getSignedJwtToken();
     res.status(statusCode).json({success:true, token});
+
 
 }
