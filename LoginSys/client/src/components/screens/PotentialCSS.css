@@ -1,0 +1,150 @@
+.body1 {background-color: #dad9ee;
+}
+
+
+
+.body2 {
+    color: rgb(255, 0, 0);
+}
+
+.body3 {
+    color: rgb(0, 0, 0);
+}
+
+
+
+  
+.div1 {background-color: #73baf8;
+    width: 1800px;
+  height: 100px;
+
+}
+
+.div2{background-color: #fb6b74;
+    width: 1800px;
+    height: 100px;
+}
+
+.div3{background-color: #953f45;
+    width: 1800px;
+    height: 100px;
+}
+
+.div3{background-color: #883a3f;
+    width: 1800px;
+    height: 100px;
+}
+
+.h1 {
+    text-align: center;
+    color: black;
+}
+
+.h2 {
+    text-align: center;
+    color: red;
+}
+
+
+
+
+
+.button1{
+        box-shadow:inset 0px 1px 0px 0px #a6827e;
+        background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+        background-color:#7d5d3b;
+        border-radius:3px;
+        border:1px solid #54381e;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:13px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #4d3534;
+    }
+    .button1:hover {
+        background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+        background-color:#634b30;
+    }
+    .button1:active {
+        position:relative;
+        top:1px;
+    }
+
+    .Button2 {
+        box-shadow:inset 0px 1px 0px 0px #ffffff;
+        background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+        background-color:#ffffff;
+        border-radius:6px;
+        border:1px solid #dcdcdc;
+        display:inline-block;
+        cursor:pointer;
+        color:#666666;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #ffffff;
+    }
+    .Button2:hover {
+        background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+        background-color:#f6f6f6;
+    }
+    .Button2:active {
+        position:relative;
+        top:1px;
+    }
+    
+    .Button3 {
+        box-shadow:inset 0px 1px 0px 0px #ff0000;
+        background:linear-gradient(to bottom, #000000 5%, #ff0000 100%);
+        background-color:#ff0000;
+        border-radius:6px;
+        border:1px solid #ff0000;
+        display:inline-block;
+        cursor:pointer;
+        color:#ff0000;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #000000;
+    }
+    .Button3:hover {
+        background:linear-gradient(to bottom, #b35454 5%, #c56464 100%);
+        background-color:#f58b8b;
+    }
+    .Button3:active {
+        position:relative;
+        top:1px;
+    }
+
+    .Button4 {
+        box-shadow:inset 0px 1px 0px 0px #000000;
+        background:linear-gradient(to bottom, #000000 5%, #ff0000 100%);
+        background-color:#ff0000;
+        border-radius:6px;
+        border:1px solid #ff0000;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #ffffff;
+    }
+    .Button4:hover {
+        background:linear-gradient(to bottom, #b35454 5%, #c56464 100%);
+        background-color:#f58b8b;
+    }
+    .Button4:active {
+        position:relative;
+        top:1px;
+    }
+    
