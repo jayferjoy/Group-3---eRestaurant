@@ -55,10 +55,11 @@ const RegisterScreen = ({ history }) => {
 
 <ul className="nav ul"> 
         <Link to="/home"><button className='navbar-btn'>Home</button></Link>
-        <Link to="/Register"><button className="navbar-btn">Register</button></Link>
-        <Link to="/Login"><button className="navbar-btn">Login</button></Link>
         <button className="navbar-btn">Menu</button>
         <button className="navbar-btn">Booking</button>
+        <Link to="/Register"><button className="navbar-btn">Register</button></Link>
+        <Link to="/Login"><button className="navbar-btn">Login</button></Link>
+        
         </ul>
     <div className="register-screen">
       <form onSubmit={registerHandler} className="register-screen__form">
@@ -110,10 +111,10 @@ const RegisterScreen = ({ history }) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <Link to="/login"><button type="submit" className="btn btn-primary">
           Register
         </button>
-
+        </Link>
         <span className="register-screen__subtext">
           Already have an account? <Link to="/login">Login</Link>
         </span>

@@ -119,6 +119,18 @@ const RegisterScreen = ({ history }) => {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="confirmpassword">Role:</label>
+          <input
+            type="text"
+            required
+            id="role"
+            autoComplete="true"
+            placeholder="Enter Role"
+            
+            
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -153,9 +165,11 @@ const RegisterScreen = ({ history }) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        
+         <button type="submit" className="navbar-btn-manager">
           Register
         </button>
+        
     </form>
         </div>
 
@@ -174,6 +188,19 @@ const RegisterScreen = ({ history }) => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
+
+        <div className="form-group">
+          <label htmlFor="confirmpassword">Location:</label>
+          <input
+            type="text"
+            required
+            id="role"
+            autoComplete="true"
+            placeholder="Location"
+            
+            
+          />
+        </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -209,12 +236,12 @@ const RegisterScreen = ({ history }) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="navbar-btn-manager">
           Register
         </button>
-
+        
         <span className="register-screen__subtext">
-          Already have an account? <Link to="/login">Login</Link>
+          
         </span>
       </form>
     </div>
